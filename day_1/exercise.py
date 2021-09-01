@@ -51,7 +51,7 @@ print()
 del_list = []   #create empty list
 for item in inventory.items():
     # use an if statement to check if the value is 0 and then remove it
-    if(item[1] == 0):
+    if item[1] == 0:
         del_list.append(item[0])  #build list of keys that need to be deleted
 
 for k in del_list:        #loop through list of items to be deleted, by key
