@@ -50,12 +50,12 @@ print()
 
 del_list = []   #create empty list of items to be deleted from inventory dictionary
 for item in inventory:
-    # use an if statement to check if the value is 0 and then remove it
+    # use an if statement to check if the value is 0, in order to mark it for removal
     if inventory[item] == 0:
-        del_list.append(item)  #build list of keys that need to be deleted
+        del_list.append(item)  #build list of items that need to be deleted
 
-for item in del_list:        #loop through list of items to be deleted, by key
-    del inventory[item]      #delete item based on current k
+for item in del_list:        #loop through list of items to be deleted
+    del inventory[item]      
 
 print("dictionary after *zero* items have been removed.")
 print("\t", inventory)          #print inventory to show if any items where deleted.
