@@ -19,10 +19,10 @@ print()
 
 # SCENARIO: A person came in and bought one of everything!
 
-#loop through dictionary and increment count of each item by 1.
-for item in inventory.items():
+#loop through dictionary and decrement count of each item by 1.
+for item in inventory:
     # decrement item by using an assignment operator (Day 2 Lecture line #130)
-    inventory.update({item[0]: item[1] + 1})
+    inventory.update({item : inventory[item]-1})
     # NOTE: recall that item represents the key of the key:value pair
 
 
@@ -48,14 +48,14 @@ print("\t", inventory)
 print()
 
 
-del_list = []   #create empty list
-for item in inventory.items():
+del_list = []   #create empty list of items to be deleted from inventory dictionary
+for item in inventory:
     # use an if statement to check if the value is 0 and then remove it
-    if item[1] == 0:
-        del_list.append(item[0])  #build list of keys that need to be deleted
+    if inventory[item] == 0:
+        del_list.append(item)  #build list of keys that need to be deleted
 
-for k in del_list:        #loop through list of items to be deleted, by key
-    del inventory[k]      #delete item based on current k
+for item in del_list:        #loop through list of items to be deleted, by key
+    del inventory[item]      #delete item based on current k
 
 print("dictionary after *zero* items have been removed.")
 print("\t", inventory)          #print inventory to show if any items where deleted.
