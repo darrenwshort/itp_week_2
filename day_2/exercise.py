@@ -34,6 +34,8 @@ float1 = float(input("Enter 1st float: "))
 float2 = float(input("Enter 2nd float: "))
 str1 = input("Do you want to (a)dd, (s)ubtract, (m)ultiply or (d)ivide? ")
 
+
+# function 'calculator'
 def calculator(f1, f2, s1):
     if s1 == "a":
         return f1 + f2
@@ -42,7 +44,7 @@ def calculator(f1, f2, s1):
     elif s1 == "m":
         return f1 * f2
     elif s1 == "d":
-        if f2 == 0:
+        if f2 == 0:    #handle divide-by-zero
             exit("You can't divide by 0.  Try again.")
         else:
             return f1 / f2
@@ -50,8 +52,10 @@ def calculator(f1, f2, s1):
         exit("Please enter valid selection (a)dd, (s)ubtract, (m)ultiply or (d)ivide.  Try again.")
     
         
-
+#save result from calculator fn call
 result = calculator(float1, float2, str1)
+
+#print result for user
 print()
 print("Result: " + str(result))
 print()
