@@ -32,13 +32,33 @@ print("Adding " + str(num1) + ", " + str(num2) + ", " + str(num3) + " & " + str(
 #     - Create a calculator function using THREE input parameters (two float, one string) to all the user to add, substract, multiply and divide.
 float1 = float(input("Enter 1st float: "))
 float2 = float(input("Enter 2nd float: "))
-str1 = input("Enter a string: ")
+str1 = input("Do you want to (a)dd, (s)ubtract, (m)ultiply or (d)ivide? ")
 
+
+# function 'calculator'
 def calculator(f1, f2, s1):
-    print(f1, f2, s1)
+    if s1 == "a":
+        return f1 + f2
+    elif s1 == "s":
+        return f1 - f2
+    elif s1 == "m":
+        return f1 * f2
+    elif s1 == "d":
+        if f2 == 0:    #handle divide-by-zero
+            exit("You can't divide by 0.  Try again.")
+        else:
+            return f1 / f2
+    else:
+        exit("Please enter valid selection (a)dd, (s)ubtract, (m)ultiply or (d)ivide.  Try again.")
+    
+        
+#save result from calculator fn call
+result = calculator(float1, float2, str1)
 
-calculator(float1, float2, str1)
-
+#print result for user
+print()
+print("Result: " + str(result))
+print()
 
 
 
@@ -71,4 +91,3 @@ print("Tip: $", tpa, "(", tip_perc, "%)")
 print("Total Cost: $", tb)
 print("Cost per person: $", tb / diners)
 print()
-
