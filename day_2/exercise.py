@@ -7,15 +7,25 @@
 #     - A function that multiplies three integers
 #     - A function that adds four integers
 
+num1 = 10
+num2 = 18
+num3 = 2
+num4 = -7
 
-def subtract(num1, num2):
-    return num1 - num2
+def subtract(n1, n2):
+    return n1 - n2
 
-def multiply(num1, num2, num3):
-    return num1 * num2 * num3
+def multiply(n1, n2, n3):
+    return n1 * n2 * n3
 
-def addition(num1, num2, num3, num4):
-    return num1 + num2 + num3 + num4
+def addition(n1, n2, n3, n4):
+    return n1 + n2 + n3 + n4
+
+print("Substracting " + str(num2) + " from " + str(num1) + " = " + str(subtract(num1, num2)))
+print("Multiplying " + str(num1) + ", " + str(num2) + " & " + str(num3) + " = " + str(multiply(num1, num2, num3)))
+print("Adding " + str(num1) + ", " + str(num2) + ", " + str(num3) + " & " + str(num4) + " = " + str(addition(num1, num2, num3, num4)))
+
+
 
 
 # Medium: 
@@ -28,6 +38,10 @@ def calculator(f1, f2, s1):
     print(f1, f2, s1)
 
 calculator(float1, float2, str1)
+
+
+
+
 
 # Hard: 
 #     - You're at a restaurant with some friends and the server didn't split up the check.  Create a function that takes a bill amount, multiplies it by a global variable called tax_rate, adds the tax, and then divides the total bill by the number of people input by the user.  BONUS:  Include an option for adding tip through either a percentage amount assigned to a global varible, or through a specific amount input by the user.
