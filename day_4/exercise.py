@@ -49,7 +49,7 @@ def calculator(f1, f2, s1):
     elif s1 == "m":              # symbol test:  if s1 == "*"
         return f1 * f2
     elif s1 == "d":              # symbol test:  if s1 == "/"
-        if f2 == 0:    #handle divide-by-zero
+        if int(f2) == 0:    #handle divide-by-zero
             exit("You can't divide by 0.  Try again.")
         else:
             return f1 / f2
