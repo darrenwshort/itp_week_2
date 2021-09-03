@@ -8,10 +8,10 @@ import re
 #     - A function that multiplies three integers
 #     - A function that adds four integers
 
-num1 = 10
-num2 = 18
-num3 = 2
-num4 = -7
+num1 = int(input("Enter 1st integer: "))
+num2 = int(input("Enter 2nd integer: "))
+num3 = int(input("Enter 3rd integer: "))
+num4 = int(input("Enter 4th integer: "))
 
 def subtract(n1, n2):
     return n1 - n2
@@ -25,6 +25,8 @@ def addition(n1, n2, n3, n4):
 print("Substracting " + str(num2) + " from " + str(num1) + " = " + str(subtract(num1, num2)))
 print("Multiplying " + str(num1) + ", " + str(num2) + " & " + str(num3) + " = " + str(multiply(num1, num2, num3)))
 print("Adding " + str(num1) + ", " + str(num2) + ", " + str(num3) + " & " + str(num4) + " = " + str(addition(num1, num2, num3, num4)))
+print()
+
 
 
 
