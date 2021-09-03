@@ -9,19 +9,19 @@ myToons = {
     "Troll": "Hunter"
 }
 
-# def pickToon(toons):
-#     select = input("Which character? \n")
-#     for toon in toons:
-#         if toons[toon] == select:
-#             print(select + " FTW! \n")
-#         #    break #skips over the else statement
-#         #    pass #does nothing
-#         #    continue #skip this loop and move to the next
-#         elif toons[toon] == "Warrior":
-#             print("You picked Undead")
-#             continue
-#         else:
-#             print("Wrong character")
+def pickToon(toons):
+    select = input("Which character? \n")
+    for toon in toons:
+        if toons[toon] == select:
+            print(select + " FTW! \n")
+        #    break #skips over the else statement
+        #    pass #does nothing
+        #    continue #skip this loop and move to the next
+        elif toons[toon] == "Warrior":
+            print("You picked Undead")
+            continue
+        else:
+            print("Wrong character")
 
 #pickToon(myToons)
 
