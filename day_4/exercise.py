@@ -50,8 +50,8 @@ ops = input("Do you want to (a)dd, (s)ubtract, (m)ultiply or (d)ivide? ")
 # define dict to map operations, abbreviation to full text.
 math_ops = {"a": "addition", "s": "subtraction", "m": "multiplication", "d": "division"}
 
-# function 'calculator' trying/testing regex (re module) with user accidentally hitting
-# one or more space characters before actual valid choice.
+# function 'calculator' - test input of single character string.
+# (a)ddition, (s)ubtraction, (m)ultiplication & (d)ivide.
 def calculator(f1, f2, operation):
     if operation == "a":               # symbol test:  if s1 == "+"
         return f1 + f2
